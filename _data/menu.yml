@@ -20,8 +20,8 @@ entries:
     entries:
       - title: covid, inflation, and wealth inequality
         url: https://financesofthenation.ca/2024/07/04/infographic-winner-2024/
-      - title: modelling the volatility of u.s. treasury yields (10y)
-        url: https://drive.google.com/file/d/1w2wQmUysOaShl7UrtDipVqJ6Zaw3OiJL/view?usp=sharing
+      - title: modelling the volatility of u.s. treasury yields (10y) in R
+        url: /treasury-garch-analysis
       - title: critical mineral export development - mabe 
         url: https://docs.google.com/document/d/e/2PACX-1vQt0mNjmaqAUtnRczfOjrmiiyECFI6HAMgWEos5coEgB2Koj5X-X1BQSPY_FTCPzXZMtuB6paSYuI4N/pub
       - title: oura ring heart rate analysis in R
