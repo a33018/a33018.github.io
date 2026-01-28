@@ -5,20 +5,29 @@ title: Volatility Modeling of U.S. 10-Year Treasury Yields Using GARCH
 
 This page presents a GARCH (Generalized Autoregressive Conditional Heteroskedasticity) volatility analysis of 10-Year U.S. Treasury yields using data from the Federal Reserve Economic Data (FRED).
 
-## Overview
-
-GARCH models are used to model and forecast financial volatility. Unlike simple rolling standard deviations, GARCH models capture:
-- **Volatility clustering**: periods of high volatility tend to cluster together
-- **Mean reversion**: volatility tends to return to a long-run average
-- **Persistence**: the impact of past shocks on current volatility
-
 ---
 
 ## Summary Statistics
 
-Key statistics for 10-Year Treasury yields and their daily changes over the analysis period.
+Key statistics for 10-Year Treasury yields and their daily changes over the analysis period (1990-2025).
 
-**Insert summary statistics table here after running the analysis**
+| Statistic | Value |
+|-----------|-------|
+| Mean Yield | 4.26% |
+| Median Yield | 4.17% |
+| Std Dev of Yield | 1.94% |
+| Min Yield | 0.52% |
+| Max Yield | 9.09% |
+| Mean Daily Change | -0.0004 pp |
+| Std Dev of Daily Change | 0.069 pp |
+| Skewness | 0.044 |
+| Kurtosis | 5.44 |
+
+
+**Key Observations:**
+- Average 10-year yield over the period: **4.26%**
+- High kurtosis (5.44) indicates **fat tails** - extreme yield changes occur more frequently than a normal distribution would predict
+- Near-zero skewness (0.044) suggests relatively symmetric distribution of changes
 
 ---
 
@@ -40,14 +49,9 @@ Daily changes in Treasury yields show periods of high and low volatility, with o
 
 ## 3. Distribution of Yield Changes
 
-The distribution of daily yield changes compared to a normal distribution (red dashed line). Notice the "fat tails" - extreme changes occur more frequently than a normal distribution would predict.
+The distribution of daily yield changes compared to a normal distribution (red dashed line). 
 
 ![Distribution of Changes](/assets/images/treasury/Plot3_Distribution.png)
-
-The distribution typically shows:
-- **Higher kurtosis** than normal distribution (fat tails)
-- **Slight skewness**
-- Evidence that extreme events are more common than normally distributed data would suggest
 
 ---
 
@@ -58,7 +62,7 @@ The estimated volatility from the GARCH(1,1) model. This represents the model's 
 ![GARCH Volatility](/assets/images/treasury/Plot4_GARCH_Volatility.png)
 
 **Key observations:**
-- Volatility spikes during financial crises and market stress periods
+- Volatility spikes during financial crises and market stress 
 - Clear evidence of volatility clustering
 - Volatility is time-varying and persistent
 
@@ -70,17 +74,10 @@ Comparison between GARCH(1,1) conditional volatility and a simple 30-day rolling
 
 ![Volatility Comparison](/assets/images/treasury/Plot5_Volatility_Comparison.png)
 
-**Why GARCH is better:**
-- More responsive to recent market conditions
-- Captures volatility dynamics more accurately
-- Provides probabilistic forecasts of future volatility
-- Better captures the persistence of volatility shocks
 
 ---
 
 ## 6. Recent Volatility (Last 5 Years)
-
-A closer look at recent volatility patterns.
 
 ![Recent Volatility](/assets/images/treasury/Plot6_Recent_Volatility.png)
 
@@ -88,7 +85,7 @@ A closer look at recent volatility patterns.
 
 ## 7. Evidence of Volatility Clustering
 
-Autocorrelation function (ACF) of squared yield changes. Significant autocorrelation indicates volatility clustering - the key feature that GARCH models capture.
+Autocorrelation function (ACF) of squared yield changes. Significant autocorrelation indicates volatility clustering.
 
 ![ACF Squared Returns](/assets/images/treasury/Plot7_ACF_Squared_Returns.png)
 
@@ -113,11 +110,7 @@ Where:
 
 Two GARCH(1,1) models were estimated:
 1. **GARCH(1,1) with Normal distribution**
-2. **GARCH(1,1) with Student-t distribution** (better for fat-tailed data)
-
-The Student-t distribution typically provides a better fit for financial data due to its heavier tails.
-
-**Model comparison based on Information Criteria available in output files**
+2. **GARCH(1,1) with Student-t distribution**
 
 ---
 
@@ -127,18 +120,8 @@ The Student-t distribution typically provides a better fit for financial data du
 
 1. **Volatility is not constant**: Treasury yield volatility varies significantly over time
 2. **Volatility clusters**: High volatility periods are followed by high volatility, low by low
-3. **Fat tails**: Extreme yield changes are more common than normal distribution predicts
-4. **Persistence**: Volatility shocks have long-lasting effects
-5. **Predictability**: GARCH models can forecast near-term volatility with reasonable accuracy
-
-### Practical Applications
-
-This analysis is useful for:
-- **Risk management**: Understanding and forecasting interest rate risk
-- **Portfolio allocation**: Adjusting fixed income exposure based on volatility forecasts
-- **Option pricing**: Volatility inputs for interest rate derivatives
-- **Policy analysis**: Understanding how monetary policy affects yield volatility
-- **Trading strategies**: Volatility-based trading signals
+3. **Persistence**: Volatility shocks have long-lasting effects
+4. **Predictability**: GARCH models can forecast near-term volatility with reasonable accuracy
 
 ---
 
