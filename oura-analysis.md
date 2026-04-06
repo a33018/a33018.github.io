@@ -81,17 +81,5 @@ Linear regression analysis showing the overall trend in resting heart rate over 
 
 ![Regression Trend Analysis](/assets/images/oura/Plot7_Regression.png)
 
----
-
-## Methodology
-
-This analysis was performed using R with the following packages:
-- `tidyverse` for data manipulation and visualization
-- `lubridate` for date handling
-- `ggplot2` for creating visualizations
-
-Data was exported from the Oura Ring app and processed to generate daily, weekly, and cumulative statistics.
-
----
 
 [← Back to Home](/)
